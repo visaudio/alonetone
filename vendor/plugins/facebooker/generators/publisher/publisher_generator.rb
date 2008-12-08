@@ -1,10 +1,14 @@
 class PublisherGenerator < Rails::Generator::NamedBase
   def manifest
-    record do |m|
-      m.directory "app/models"
-      m.template "publisher.rb", "app/models/#{file_name}_publisher.rb"
-    end
+    puts banner
+    exit(1)
   end
   
+  def banner
+    <<-EOM
+    This generator has been renamed to facebook_publisher    
+    please run:  #{$0} facebook_publisher
+    EOM
+  end
   
 end
